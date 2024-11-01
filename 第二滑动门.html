@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*子代选择器*/
+        .yijihezi{
+            width: 700px;
+            height: 200px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .yijicaidan{
+            padding: 0;
+        }
+        .yijicaidan>li{
+            list-style: none;
+            background-color: rgb(222, 227, 226);
+            float: left;
+            margin: 0px 3px;
+            width: 90px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius:5px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+        }
+        .erjihezi{
+            position: absolute; 
+            top: 134px;   
+            background-color: rgb(222, 227, 226);
+            width: 90px;
+            height: 134px;
+            border-radius: 5px;
+            display: none;
+        }
+        .erjicaidan{
+            padding: 0px;
+        }
+        .erjicaidan li{
+            display: flex;
+            list-style: none;
+            margin: 13px;
+            justify-content: center;
+        }
+        .yijicaidan>li:hover>.erjihezi{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="yijihezi">
+        <ul class="yijicaidan">
+            <li>
+                <a href="#">娱乐</a>
+            </li>
+            <li>
+                <a href="#">科技</a>
+                <div class="erjihezi">
+                    <ul class="erjicaidan"> 
+                        <li><a href="#">数码</a></li>
+                        <li><a href="#">手机</a></li>
+                        <li><a href="#">电脑</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">美食</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
